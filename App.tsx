@@ -14,6 +14,7 @@ const members: { name: string; github_repo: string; group_no: string }[] = [
   { name: "Bob Li", github_repo: "bob-li", group_no: "3" },
   { name: "Charlie Wu", github_repo: "charlie-wu", group_no: "3" },
 ];
+// test
 
 export default function App() {
 

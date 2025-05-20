@@ -1,6 +1,14 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "jsx": "react",
+    "strict": true,
+    "allowJs": true,
+    "checkJs": false,         // Set to true if you want to check JS files too
+    "noEmit": true,           // Prevents emitting files, usually for projects using Babel
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
 }
