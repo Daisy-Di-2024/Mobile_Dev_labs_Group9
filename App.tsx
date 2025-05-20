@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>小组成员列表</Text>
+      <Text style={styles.title}>Groupmember</Text>
 
       <ScrollView contentContainerStyle={styles.list}>
         {members.map((m, idx) => (
@@ -35,7 +35,7 @@ export default function App() {
       </ScrollView>
 
       <Pressable onPress={onPressComplete} style={styles.button}>
-        <Text style={styles.buttonText}>点我完成实验 1</Text>
+        <Text style={styles.buttonText}>Click</Text>
       </Pressable>
     </View>
   );
