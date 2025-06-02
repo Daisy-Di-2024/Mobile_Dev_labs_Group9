@@ -33,7 +33,6 @@ export default function App() {
       <Pressable onPress={handlePress}>
         <Text style={styles.button}>Click here when Lab is done</Text>
       </Pressable>
-      <p></p>
       <Text style={styles.welcome}>Welcome to the Fruit App</Text>
      <FruitList />
     </ScrollView>
