@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet, Alert, ScrollView, Button } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Alert, ScrollView, Button, TouchableOpacity } from 'react-native';
 import FruitList from '../components/fruit_list';
-import { router } from 'expo-router';
+import { router, useRouter } from 'expo-router';
 
 type GroupMember = {
   name: string;
@@ -15,10 +15,16 @@ const groupMembers: GroupMember[] = [
   { name: 'Samarbeer singh', github_repo: 'amy12345', group_no: '9' }
 ];
 
+
+
+
 export default function App() {
   const handlePress = () => {
     Alert.alert('Lab 1 done');
   };
+
+  // lab3:
+  const router = useRouter();
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -39,7 +45,19 @@ export default function App() {
 
       <Text style={styles.title}>Welcome to the Fruit App</Text>
       <FruitList />
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      
+      {/* Lab 3 */}
+      <View>
+        <Text style={styles.title}>Lab 3</Text>
+        <TouchableOpacity style={styles.lab3Button} onPress={() => router.push('/lab3')}>
+        <Text style={styles.lab3Text}>Go to Lab 3</Text>
+        </TouchableOpacity>
+      </View>
     </ScrollView>
+    
   );
 }
 
@@ -59,7 +77,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20
+    marginBottom: 20,
+    textAlign: 'center'
   },
   member: {
     fontSize: 18,
@@ -76,5 +95,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-  }
+  },
+  lab3Button: {
+    backgroundColor: '#4CAF50',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderRadius: 6,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  lab3Text: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });
