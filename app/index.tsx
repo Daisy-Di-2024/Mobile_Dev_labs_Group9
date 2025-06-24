@@ -26,6 +26,7 @@ export default function App() {
   // lab3:
   const router = useRouter();
 
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Group Members</Text>
@@ -48,17 +49,27 @@ export default function App() {
       <Text></Text>
       <Text></Text>
       <Text></Text>
-      
+
       {/* Lab 3 */}
       <View>
         <Text style={styles.title}>Lab 3</Text>
         <TouchableOpacity style={styles.lab3Button} onPress={() => router.push('/lab3')}>
-        <Text style={styles.lab3Text}>Go to Lab 3</Text>
+          <Text style={styles.lab3Text}>Go to Lab 3</Text>
+        </TouchableOpacity>
+      </View>
+      <Text></Text>
+      <Text></Text>
+      <Text></Text>
+      {/* Lab 4 */}
+      <View>
+        <Text style={styles.title}>Lab 4</Text>
+        <TouchableOpacity style={styles.lab4Button} onPress={() => router.push('/lab4')}>
+          <Text style={styles.lab4Text}>Go to Lab 4</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
-    
-  );
+
+  )
 }
 
 
@@ -109,4 +120,19 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
+
+  lab4Button: {
+    backgroundColor: '#4CA',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderRadius: 6,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  lab4Text: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+
 });
