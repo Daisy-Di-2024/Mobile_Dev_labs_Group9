@@ -41,14 +41,11 @@ export default function App() {
         <Text style={styles.button}>Click here when Lab is done</Text>
       </Pressable>
       <Text></Text>
-      <Text></Text>
-      <Text></Text>
 
       <Text style={styles.title}>Welcome to the Fruit App</Text>
       <FruitList />
       <Text></Text>
-      <Text></Text>
-      <Text></Text>
+
 
       {/* Lab 3 */}
       <View>
@@ -58,13 +55,21 @@ export default function App() {
         </TouchableOpacity>
       </View>
       <Text></Text>
-      <Text></Text>
-      <Text></Text>
+
       {/* Lab 4 */}
       <View>
         <Text style={styles.title}>Lab 4</Text>
         <TouchableOpacity style={styles.lab4Button} onPress={() => router.push('/lab4')}>
           <Text style={styles.lab4Text}>Go to Lab 4</Text>
+        </TouchableOpacity>
+      </View>
+      <Text></Text>
+
+      {/* Lab 5 */}
+      <View>
+        <Text style={styles.title}>Lab 5</Text>
+        <TouchableOpacity style={styles.lab5Button} onPress={() => router.push('/lab5')}>
+          <Text style={styles.lab5Text}>Go to Lab 5</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -130,6 +135,19 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   lab4Text: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  lab5Button: {
+    backgroundColor: '#4425',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderRadius: 6,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  lab5Text: {
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
